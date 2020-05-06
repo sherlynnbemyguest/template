@@ -61,6 +61,29 @@ table.count-down{
 	}
 }
 
+.social-wrap{
+	position: fixed;
+    right: 0;
+    top: 22%;
+    background: #9bb75e;
+	z-index: 5;
+	padding: 5px 0;
+	
+	ul{
+		li{
+			a{
+				padding: 10px 12px;
+				float: left;
+				width: 100%;
+			}
+
+			img{
+				max-width: 25px;
+			}
+		}
+	}
+}
+
 section{
 	width: 100%;
 	float: left;
@@ -201,11 +224,61 @@ section{
 	.text-block{
 		z-index: 2;
 	}
+
+	.article-wrap{
+		p{
+			font-size: 12px;
+		}
+	}
 }
 
 #fifth-frame{
 	.text-block{
 		z-index: 3;
+	}
+	
+
+	.benefits-wrap{
+		position: relative;
+
+		img{
+			max-width: 400px;
+			margin: 0 auto;
+			display: block;
+		}
+
+		.benefit {
+			font-size: 13px;
+			position: absolute;
+			max-width: 115px;
+			margin: auto;
+
+			&.one{
+
+				top: 0;
+			}
+			
+			&.two{
+				bottom: 22%;
+			}
+
+			&.three{
+				bottom: -14px;
+			}
+
+			&.fourth{
+				top: 0;
+    			right: -10px;
+			}
+			&.fifth{
+				bottom: 21%;
+				right: -20px;
+			}
+			&.sixth{
+				bottom: 0;
+				right: -20px;
+			}
+		}
 	}
 
 	.shape-bg{
@@ -578,8 +651,10 @@ section{
 
 .call-out{
 	padding: 50px 0;
-	background: @Secondary;
+	background-color: @Secondary;
 	color: #ffffff;
+	background: url(../images/bg-partnership.png) #5A1F5F;
+	background-position: center;
 }
 
 .contact-us{
@@ -656,7 +731,7 @@ section{
 
 .button-wrap{
 	flex-wrap: wrap;
-	
+
 	button{
 		margin: 10px 10px 10px 0;
 		border: 0;
@@ -722,6 +797,35 @@ footer{
 	}
 }
 
+
+@media screen and (max-width: 900px){
+	#fifth-frame{
+		.col{
+			&.s5, &.s7{
+				width: 100%;
+				max-width: 100%;
+				-ms-flex: 0 0 100%;
+    			flex: 0 0 100%;
+			}
+		}
+
+		.benefits-wrap{
+			max-width: 500px;
+			margin: auto;
+
+			img{
+				width: 70%;
+			}
+
+			.benefit{
+				&.two{
+					bottom: 16%;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 500px){
 	table.count-down{
 		td{
@@ -747,6 +851,25 @@ footer{
 
 	#fifth-frame{
 		padding-bottom: 0;
+
+		.benefits-wrap{
+			max-width: 500px;
+			margin: auto;
+
+			img{
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			.benefit{
+				max-width: 100%;
+				padding: 10px;
+				position: unset;
+				display: list-item;                                                  
+				list-style-type: disc;       
+				list-style-position: inside;
+			}
+		}
 	}
 
 
